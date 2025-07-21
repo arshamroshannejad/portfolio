@@ -1,76 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Experienced Golang developer crafting efficient and scalable applications. Explore my projects and see how I can bring value to your next big idea!"
-    />
-    <meta
-      name="keywords"
-      content="Arsham, Roshannejad, Golang, Go, Engineer, Developer, Portfolio, Resume, Software Developer"
-    />
-    <meta name="author" content="Arsham Roshannejad" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <title>Arsham Roshannejad | Software Engineer (Golang)</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav role="navigation">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="about" role="region">
-        <h1>Arsham Roshannejad</h1>
-        <h2>Software Engineer (Golang)</h2>
-        <p>
-          Passionate Golang developer with experience in building scalable and
-          high-performance applications.
-        </p>
-      </section>
-      <section id="skills" role="region">
-        <h2>Skills</h2>
-        <ul>
-          <li>Golang</li>
-          <li>Microservices</li>
-          <li>REST & gRPC APIs</li>
-          <li>Docker & Kubernetes</li>
-          <li>SQL & NoSQL Databases</li>
-        </ul>
-      </section>
-      <section id="contact" role="region">
-        <h2>Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:arshamdev2001@gmail.com">arshamdev2001@gmail.com</a>
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/arshamroshannejad/"
-            >github.com/arshamroshannejad/</a
-          >
-        </p>
-        <p>
-          Linkedin:
-          <a href="https://www.linkedin.com/in/arsham-roshannejad/"
-            >linkedin.com/in/arsham-roshannejad/</a
-          >
-        </p>
-      </section>
-    </main>
-    <footer>
-      <p>© 2025 Arsham Roshannejad. All Rights Reserved.</p>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description"
+    content="Experienced Golang developer crafting efficient and scalable applications. Explore my projects and see how I can bring value to your next big idea!" />
+  <meta name="keywords"
+    content="Arsham, Roshannejad, Golang, Go, Engineer, Developer, Portfolio, Resume, Software Developer" />
+  <meta name="author" content="Arsham Roshannejad" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <title>Arsham Roshannejad | Software Engineer (Golang)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav role="navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about" role="region">
+      <h1>Arsham Roshannejad</h1>
+      <h2>Software Engineer (Golang)</h2>
+      <p>
+        Passionate Golang developer with experience in building scalable and
+        high-performance applications.
+      </p>
+    </section>
+    <section id="skills" role="region">
+      <h2>Skills</h2>
+      <ul>
+        <li>Golang</li>
+        <li>Microservices</li>
+        <li>REST & gRPC APIs</li>
+        <li>Docker & Kubernetes</li>
+        <li>SQL & NoSQL Databases</li>
+      </ul>
+    </section>
+    <section id="contact" role="region">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:arshamdev2001@gmail.com">arshamdev2001@gmail.com</a>
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/arshamroshannejad/">github.com/arshamroshannejad/</a>
+      </p>
+      <p>
+        Linkedin:
+        <a href="https://www.linkedin.com/in/arsham-roshannejad/">linkedin.com/in/arsham-roshannejad/</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Arsham Roshannejad. All Rights Reserved.</p>
+  </footer>
+</body>
+<script>
+  const sections = document.querySelectorAll('section');
+  const header = document.querySelector('header');
+
+  function checkSections() {
+    sections.forEach((sec) => {
+      const secTop = sec.getBoundingClientRect().top;
+      if (secTop < window.innerHeight - 100) {
+        sec.classList.add('show');
+      }
+    });
+
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', checkSections);
+  window.addEventListener('load', checkSections);
+</script>
+
 </html>
